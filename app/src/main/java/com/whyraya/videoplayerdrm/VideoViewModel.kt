@@ -53,6 +53,7 @@ class VideoViewModel @Inject constructor(
         val contentUri = videoItem.value.find { it.contentUri == uri }?.mediaItem ?: return
 
         player.setMediaItem(contentUri)
+        player.playWhenReady = true
     }
 
     @UnstableApi
